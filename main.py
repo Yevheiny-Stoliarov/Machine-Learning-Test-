@@ -52,9 +52,8 @@ for _ in range(100):
     label = [1] if a + b > 10 else [0]
     training_data.append(([a / 10, b / 10], label))
 
-weights1 = init_layer(2, 4)  # 2 inputs → 4 hidden neurons
-weights2 = init_layer(4, 1)  # 4 hidden → 1 output
-
+weights1 = init_layer(2, 4)
+weights2 = init_layer(4, 1)  
 train(training_data, weights1, weights2)
 
 test_input = [0.6, 0.5]  # 6 + 5 = 11 → should be 1
